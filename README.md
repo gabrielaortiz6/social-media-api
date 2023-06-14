@@ -30,7 +30,7 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
 
 The following video shows examples of the application's API routes being tested in Postman.
 
-![Demo Walkthrough]()
+![Demo Walkthrough](https://drive.google.com/file/d/1ZtGBOWBN4irzuU5LcgJzYKJ2MjXPNFBJ/view)
 
 ## Usage
 
