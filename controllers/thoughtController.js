@@ -28,7 +28,8 @@ const createThought = async (req, res) => {
   try {
     const newThought = await Thought.create(req.body);
     // Push the created thought's _id to the associated user's thoughts array field
-    const user = await User.findById(req.body.userId);
+    const user = await User.findOne({ username: req.body.username });
+    //User.findById(req.body.userId);
     if (!user) {
       return res.status(404).json({ error: 'User not found' });
     }
