@@ -9,7 +9,7 @@ const {
   deleteUser,
   addFriend,
   removeFriend,
-} = require('../controllers/userController');
+} = require('../../controllers/userController');
 
 //get all users
 router.get('/', getAllUsers);

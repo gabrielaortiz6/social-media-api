@@ -10,7 +10,7 @@ const thoughtSchema = new Schema(
       maxlength: 280
     },
     username: {
-      type: mongoose.Schema.Types.ObjectId,
+      type: Schema.Types.ObjectId,
       required: true,
       ref: 'User'
     },
