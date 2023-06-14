@@ -4,7 +4,7 @@ const { User, Thought } = require('../models');
 //get one User by id
 const getUserById = async (req, res) => {
   try {
-    const user = await User.findById(req.params.userId).populate('thoughts').populate('friends');
+    const user = await User.findById(req.params.userId);
     if (!user) {
       return res.status(404).json({ error: 'User not found' });
     }
@@ -17,7 +17,8 @@ const getUserById = async (req, res) => {
 // get all users
 const getAllUsers = async (req, res) => {
   try {
-    const users = await User.find().populate('thoughts').populate('friends');
+    const users = await User.find()
+    //.populate('thoughts').populate('friends');
     res.json(users);
   } catch (error) {
     res.status(500).json({ error: 'Server error' });
